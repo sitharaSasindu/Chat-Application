@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/Chat/ChatService?wsdl" uri="wsdl/localhost_8080/Chat/ChatService.wsdl"/>
+    <system systemId="http://localhost:8080/Chat/ChatService?xsd=1" uri="wsdl/localhost_8080/Chat/ChatService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Chat/UserService?wsdl" uri="wsdl/localhost_8080/Chat/UserService.wsdl"/>
+    <system systemId="http://localhost:8080/Chat/UserService?xsd=1" uri="wsdl/localhost_8080/Chat/UserService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Chat/Registration?wsdl" uri="wsdl/localhost_8080/Chat/Registration.wsdl"/>
+    <system systemId="http://localhost:8080/Chat/Registration?xsd=1" uri="wsdl/localhost_8080/Chat/Registration.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Chat/Login?wsdl" uri="wsdl/localhost_8080/Chat/Login.wsdl"/>
+    <system systemId="http://localhost:8080/Chat/Login?xsd=1" uri="wsdl/localhost_8080/Chat/Login.xsd_1.xsd"/>
+</catalog>

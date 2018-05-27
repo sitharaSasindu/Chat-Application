@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Chat/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Chat/">
+
+<xs:element name="addMessage" type="tns:addMessage"/>
+
+<xs:element name="checkTitle" type="tns:checkTitle"/>
+
+<xs:element name="checkTitleResponse" type="tns:checkTitleResponse"/>
+
+<xs:element name="createThraed" type="tns:createThraed"/>
+
+<xs:element name="getThreadData" type="tns:getThreadData"/>
+
+<xs:element name="getThreadDataResponse" type="tns:getThreadDataResponse"/>
+
+<xs:element name="showChats" type="tns:showChats"/>
+
+<xs:element name="showChatsResponse" type="tns:showChatsResponse"/>
+
+<xs:element name="updateTable" type="tns:updateTable"/>
+
+<xs:complexType name="showChats">
+<xs:sequence>
+<xs:element name="chatTitle" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="showChatsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:message" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="message">
+<xs:sequence>
+<xs:element name="lastEdited" type="xs:string" minOccurs="0"/>
+<xs:element name="messageContent" type="xs:string" minOccurs="0"/>
+<xs:element name="sender" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThreadData">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getThreadDataResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:chatThread" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="chatThread">
+<xs:sequence>
+<xs:element name="author" type="xs:string" minOccurs="0"/>
+<xs:element name="lastEdited" type="xs:string" minOccurs="0"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkTitle">
+<xs:sequence>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkTitleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createThraed">
+<xs:sequence>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="author" type="xs:string" minOccurs="0"/>
+<xs:element name="lastEdited" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTable">
+<xs:sequence>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="lastEdited" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addMessage">
+<xs:sequence>
+<xs:element name="messageContent" type="xs:string" minOccurs="0"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="sender" type="xs:string" minOccurs="0"/>
+<xs:element name="lastEdited" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
