@@ -20,6 +20,7 @@ public class DBConnection {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
+            // TODO: Take database details from config files
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/csachat", "root", "");
             st = con.createStatement();
 
@@ -58,6 +59,7 @@ public class DBConnection {
             prep = con.prepareStatement(query);
             prep.executeUpdate();
         } catch (Exception e) {
+            //TODO: Log errors more meaningfully
             System.out.println(e);
         }
 
