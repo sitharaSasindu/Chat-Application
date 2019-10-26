@@ -81,7 +81,7 @@ public class EditThread extends javax.swing.JFrame {
 
         back.setBackground(new java.awt.Color(0, 153, 153));
         back.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        back.setText("Back");
+        back.setText("<< Back");
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
@@ -90,7 +90,7 @@ public class EditThread extends javax.swing.JFrame {
 
         addMessage.setBackground(new java.awt.Color(0, 153, 153));
         addMessage.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        addMessage.setText("Add Message");
+        addMessage.setText("Add a Message");
         addMessage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addMessageActionPerformed(evt);
@@ -98,10 +98,10 @@ public class EditThread extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Select Thread");
+        jLabel3.setText("Select a Thread");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setText("Add Message to :");
+        jLabel5.setText("Add a Message to :");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 28)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 102, 255));
