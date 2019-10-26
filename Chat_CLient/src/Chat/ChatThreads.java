@@ -113,7 +113,7 @@ public class ChatThreads extends javax.swing.JFrame {
 
         editThread1.setBackground(new java.awt.Color(0, 153, 204));
         editThread1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        editThread1.setText("Edit  Conversation");
+        editThread1.setText("Edit the Conversation");
         editThread1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editThread1ActionPerformed(evt);
