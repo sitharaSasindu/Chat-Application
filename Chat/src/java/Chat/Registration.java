@@ -29,23 +29,23 @@ public class Registration {
         
     
         if(name.equals("")){
-            Util.showMessage(null, "Please Enter Your Name");
+            Util.showMessage(null, "Please Enter Your Name: ");
           
             return false;
         }else if(loginId.equals("")){
-            Util.showMessage(null, "Please Enter a Login Id");
+            Util.showMessage(null, "Please Enter a Login Id: ");
           
             return false;
         }else if(pswrd.equals("")){
-            Util.showMessage(null, "Please Enter a Password");
+            Util.showMessage(null, "Please Enter a Password: ");
          
             return false;
          }else if(repswrd.equals("")){
-            Util.showMessage(null, "Please Enter a Password");
+            Util.showMessage(null, "Please Confirm Your Password: ");
           
             return false;
          }else if(!pswrd.equals(repswrd)){
-            Util.showError(null, "Password Mismatch. Please Check Again!");
+            Util.showError(null, "Password Do Not Match. Please Check Again!");
            
             return false;
         } else{

@@ -24,11 +24,12 @@ public class Connect {
 public static Connection getCon() { //return the connection to use it in any class
     try {
         Class.forName("com.mysql.jdbc.Driver");
+        //TODO: Database details froma global file
         con=DriverManager.getConnection("jdbc:mysql://localhost/csachat", "root", "");
-        System.out.println("Succesfully Connected"); 
+        System.out.println("Succesfully Connected to Database"); 
     } catch (Exception e) {
         e.printStackTrace();
-        System.out.println("Connection Failed");
+        System.out.println("Connection Failed, Chech the database name and username");
     }
     return con;
 }
