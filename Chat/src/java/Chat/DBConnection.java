@@ -82,6 +82,7 @@ public class DBConnection {
             }
 
         } catch (Exception e) {
+            //TODO: Log errors meaningfully
             System.out.println(e);
         }
         return false;
@@ -95,6 +96,7 @@ public class DBConnection {
             prep.executeUpdate();
 
         } catch (Exception e) {
+            //TODO: Log errors meaningfully
             System.out.println(e);
         }
     }
@@ -110,6 +112,7 @@ public class DBConnection {
             prep.executeUpdate();
 
         } catch (Exception e) {
+            //TODO: Log errors meaningfully
             System.out.println(e);
 
         }
@@ -125,6 +128,7 @@ public class DBConnection {
             prep.executeUpdate();
 
         } catch (Exception e) {
+            //TODO: Log errors meaningfully
             System.out.println(e);
         }
     }
