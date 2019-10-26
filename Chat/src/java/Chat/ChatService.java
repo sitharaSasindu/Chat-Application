@@ -14,7 +14,7 @@ import javax.jws.WebParam;
 
 /**
  *
- * @author DELL
+ * @author Sithara
  */
 @WebService(serviceName = "ChatService")
 public class ChatService {
@@ -88,14 +88,14 @@ public class ChatService {
 
         }
 
-        return chatThreads.toArray(new ChatThread[chatThreads.size()]);
+        return chatThreads.toArray(new ChatThread[ chatThreads.size() ]);
     }
 
     /**
      * Send Chat data to the client
      */
-    @WebMethod(operationName = "showChats")
-    public Message[] showChats(@WebParam(name = "chatTitle") String chatTitle) {
+    @WebMethod( operationName = "showChats" )
+    public Message[] showChats( @WebParam( name = "chatTitle" ) String chatTitle ) {
 
         String query = "select message,sender,lastEdited"
                 + " from message where title='" + chatTitle + "'";
@@ -103,7 +103,7 @@ public class ChatService {
         db = new DBConnection();
         try {
             db.rs = db.st.executeQuery(query);
-            while (db.rs.next()) {
+            while ( db.rs.next() ) {
                 Message message = new Message();
                 message.setMessageContent(db.rs.getString("message"));
                 message.setSender(db.rs.getString("sender"));

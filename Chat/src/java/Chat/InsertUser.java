@@ -33,7 +33,7 @@ public class InsertUser {
            i = stat.executeUpdate();
            
         }catch (Exception e){
-            System.out.println(e);
+            System.out.println("ERROR" + e);
         }
        return i;
     }

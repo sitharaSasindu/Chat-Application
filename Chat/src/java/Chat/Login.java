@@ -35,25 +35,32 @@ public class Login {
     /**
      * Web service operation
      */
-    @WebMethod(operationName = "LoginOperation")//getting details through the web service
-    public String LoginOperation(@WebParam(name = "loginId") String loginId, @WebParam(name = "password") String password) {
+    @WebMethod( operationName = "LoginOperation" )
+    // getting details through the web service
+    public String LoginOperation( @WebParam( name = "loginId" ) String loginId, @WebParam( name = "password" ) String password ) 
+    {
      
-        try{//query to check datbase details
+        try
+        {
+            //query to check datbase details
             String sql = "select * from users where LoginId=? and Password=?";
             stat =  Connect.getCon().prepareStatement(sql);
             stat.setString(1, loginId);
             stat.setString(2, password);
             rs = stat.executeQuery();
          
-             if(rs.next()){//if resultset is available return true
+             if( rs.next() )
+             {
+                 //if resultset is available return true
                 return "True";    
                 
-            } else{ //else return flase
-           return "False";
+            } else{ 
+                //else return flase
+                return "False";
             }
         
-        }catch(Exception e){
+        } catch ( Exception e ){
             return "False";
-    }
+        }
     }
 }
